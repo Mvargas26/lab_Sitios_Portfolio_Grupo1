@@ -35,31 +35,21 @@ $productos = $producto->mostrarProductos();
         </div>
 
         <div class="row">
-
-            
-
-
             <?php if ($productos) : ?>
-            <?php foreach ($productos as $producto) : ?>
-                <div class="column <?php echo $producto['Categoria'];?>">
-                <div class="content">
-                    <img src="assets/images/<?php echo $producto['Imagen']; ?>" alt="Lights" style="width:100%">
-                    <h4> <?php echo $producto['Nombre']; ?></h4>
-                    <p> <?php echo $producto['Descripcion']; ?></p>
-                </div>
-            </div>
-            <?php endforeach; ?>
-    <?php else : ?>
-        <p>No se encontraron productos.</p>
-    <?php endif; ?>
+                <?php foreach ($productos as $producto) : ?>
+                    <div class="column <?php echo $producto['Categoria']; ?>">
+                        <div class="content">
+                            <img src="assets/images/<?php echo $producto['Imagen']; ?>" alt="Lights" style="width:100%">
+                            <h4> <?php echo $producto['Nombre']; ?></h4>
+                            <p> <?php echo $producto['Descripcion']; ?></p>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            <?php else : ?>
+                <p>No se encontraron productos.</p>
+            <?php endif; ?>
 
         </div>
-
-
-
-
-
-
         <!-- END MAIN -->
     </div>
     <script src="./assets/js/scripts.js"></script>
