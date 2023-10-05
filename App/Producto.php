@@ -1,4 +1,6 @@
 <?php
+include_once('Db.php');
+
 class Producto {
     private $db;
 
@@ -13,16 +15,18 @@ class Producto {
             $stmt = $conexion->prepare($query);
             $stmt->execute();
             $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+       
             return $productos;
+            
         } catch (PDOException $e) {
             die("Error al obtener productos: " . $e->getMessage());
         }
     }
 
     public function mostrarProductos() {
-        $productos = $this->obtenerProductos();
-       
-        include '../index.php';
+        
+       return $productos = $this->obtenerProductos();
     }
 }
 ?>

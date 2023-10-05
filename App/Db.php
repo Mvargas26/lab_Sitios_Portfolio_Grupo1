@@ -1,9 +1,9 @@
 <?php
 class Db {
     private $host = 'localhost';
-    private $usuario = 'gonar';
-    private $contrasena = 'gonar070911#';
-    private $dbnombre = 'tiusr29pl_LaboratorioPortafolioGrupo1';
+    private $usuario = 'root';
+    private $contrasena = '';
+    private $dbnombre = 'productosportfolio';
     private $conexion;
 
     public function conectar() {
